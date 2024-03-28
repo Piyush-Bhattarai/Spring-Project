@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Home Page</title>
 </head>
 <body>
-<h1>Welcome :</h1>
 
+	<th:block  th:insert ="Header.html"/>
+   
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+    return "Are you sure you want to navigate away from this page?";
+};
+</script>
 </body>
 </html>

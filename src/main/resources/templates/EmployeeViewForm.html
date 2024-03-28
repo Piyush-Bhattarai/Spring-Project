@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>employee-view-form</title>
+</head>
+<body>
+	<th:block  th:insert ="Header.html"/>
+
+	<div class="container-fluid">
+		<div class="card">
+
+			<div class="card-header text-center bg-primary text-white">
+				<h5>Employee View Form</h5>
+			</div>
+			<div class="card-body">
+				<form th:object="${empObj}">
+					<div class="row p-2">
+						<div class="col-4">FirstName</div>
+						<div class="col-6">
+							<input type="text" th:field="*{fname}" readonly="readonly" class="form-control">
+
+
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">LastName</div>
+						<div class="col-6">
+							<input type="text" th:field="*{lname}" readonly="readonly" class="form-control">
+
+
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Gender</div>
+						<div class="col-6">
+							<input type="radio" th:field="*{gender}" readonly="readonly" value="male">Male 
+							<input type="radio" th:field="*{gender}"  readonly="readonly"value="female">Female
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Date of Birth</div>
+						<div class="col-6">
+							<input type="date" th:field="*{dob}" readonly="readonly" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Join Date</div>
+						<div class="col-6">
+							<input type="date" th:field="*{joinDate}" readonly="readonly" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Country</div>
+						<div class="col-6">
+							<input type="text" th:field="*{address.country}" readonly="readonly"
+								class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">City</div>
+						<div class="col-6">
+							<input type="text" th:field="*{address.city}" readonly="readonly"
+								class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4" >State</div>
+						<div class="col-6">
+
+							<select th:field="*{address.state}"  class="form-control">
+
+								<option value="" >Select</option>
+								<option value="state-1">state-1</option>
+								<option value="state-2">state-2</option>
+								<option value="state-3">state-3</option>
+								<option value="state-4">state-4</option>
+								<option value="state-5">state-5</option>
+								<option value="state-6">state-6</option>
+								<option value="state-7">state-7</option>
+
+
+							</select>
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">ZipCode</div>
+						<div class="col-6">
+							<input type="text" th:field="*{address.zipcode}" readonly="readonly"
+								class="form-control">
+						</div>
+					</div>
+
+
+					<div class="row p-2">
+						<div class="col-4">Phone</div>
+						<div class="col-6">
+							<input type="text" th:field="*{phone}" readonly="readonly" class="form-control">
+
+
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Company Name</div>
+						<div class="col-6">
+							<input type="text" th:field="*{company}" readonly="readonly" class="form-control">
+
+
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Project</div>
+						<div class="col-6">
+							<input type="checkbox" th:field="*{projects}" readonly="readonly" value="project-1">
+							Project-1 <input type="checkbox" th:field="*{projects}" readonly="readonly"
+								value="project-2"> Project-2 <input type="checkbox"
+								th:field="*{projects}" readonly="readonly" value="project-3"> Project-3 <input
+								type="checkbox" th:field="*{projects}" readonly="readonly" value="project-4">
+							Project-4 <input type="checkbox" th:field="*{projects}" readonly="readonly"
+								value="project-5"> Project-5 <input type="checkbox"
+								th:field="*{projects}" readonly="readonly" value="project-6"> Project-6 <input
+								type="checkbox" th:field="*{projects}" readonly="readonly" value="project-7">
+							Project-7
+
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Department</div>
+						<div class="col-6">
+							<select class="form-control" th:field="*{department}" >
+							
+								<option value="">Select</option> 
+
+								<option th:each="dept:${deptList}" th:value="${dept.id}">[[${dept.dpt_name}]]</option>
+
+							</select>
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Post</div>
+						<div class="col-6">
+							<input type="text" th:field="*{post}" readonly="readonly" class="form-control">
+
+
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Salary</div>
+						<div class="col-6">
+							<input type="text" th:field="*{salary}" readonly="readonly" class="form-control">
+
+
+						</div>
+					</div>
+
+
+				</form>
+					<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<a href="/employee/list"><input type="submit" value="Back" class="btn btn-success btn-sm"></a>
+						</div>
+					</div>
+
+			</div>
+			<div class="card-footer text-center bg-warning">
+				<h6>copyright@2024</h6>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

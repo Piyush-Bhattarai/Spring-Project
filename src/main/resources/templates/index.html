@@ -1,14 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand {
+        color:white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: #fff !important;
+        }
+        .header-content {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .header-content h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .feature-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card .card-body {
+            padding: 30px;
+        }
+        .feature-card h4 {
+            font-weight: bold;
+        }
+        .about-section, .contact-section {
+            margin-top: 60px;
+        }
+        .footer {
+            margin-top: 60px;
+            padding: 20px 0;
+            background-color: #f7f7f7;
+            color: #666;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<h1>index page</h1>
-<hr>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Employee Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item" style="margin-right:15px">
+                        <a class="btn btn-light" href="/user/signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="/user/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<a href ="user/login"> login</a> | <a href ="user/signup">Signup</a>
+    <div class="container">
+        <!-- Header -->
+        <div class="row header-content">
+            <div class="col-md-12">
+                <h1>Welcome to the <br> Employee Management System</h1>
+                <p>Manage your employees efficiently and effortlessly.</p>
+            </div>
+        </div>
 
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Manage Employees</h4>
+                        <p class="card-text">Effortlessly add, edit, and manage employee details at one place.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Manage Department</h4>
+                        <p class="card-text">Department Management wiqwws</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Contact with Employee</h4>
+                        <p class="card-text">Track and analyze employee performance with detailed reports.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="row about-section">
+            <div class="col-md-12">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing solutions that make workplace management seamless and efficient. Our Employee Management System is designed to empower teams and leaders with the tools they need for success.</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="row contact-section">
+            <div class="col-md-12">
+                <h3>Contact Us</h3>
+                <p>Have questions? Reach out to us at <a href="/contact">contact@ems.com</a>.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-md-12 footer">
+                <p>Employee Management System &copy; 2024</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
